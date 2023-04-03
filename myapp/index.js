@@ -22,7 +22,7 @@ const pool = new Pool({
 // Add process hook to shutdown pool
 process.on('SIGINT', function() {
     pool.end();
-    console.log('Application has successfully shutdown');
+    console.log('Application successfully shutdown');
     process.exit(0);
 });
 
