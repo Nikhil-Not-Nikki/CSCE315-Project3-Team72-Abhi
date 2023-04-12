@@ -1,0 +1,24 @@
+.content {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    min-height: 95vh;
+}
+
+.button-container {
+    justify-content: center;
+    display: flex;
+    gap: 40px;
+    margin-top: 200px;
+}
+
+.foot {
+    margin-top: auto;
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
+
+.welcome-message {
+    text-align: center;
+}

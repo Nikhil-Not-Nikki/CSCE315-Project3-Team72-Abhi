@@ -3,7 +3,10 @@ import './App.css';
 import styled from "styled-components";
 import React, { useState, useEffect } from "react";
 import {View, TextInput} from 'react-native';
-
+import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
+import Manager from './pages/manager';
+import ManagerInventory from './pages/manager-inventory'
+import ManagerMenu from './pages/manager-menu'
 
 class Menu {
 
@@ -281,8 +284,6 @@ function useForceUpdate(){
   // is better than directly setting `setValue(value + 1)`
 }
 
-
-
 const types = ["Cash", "Credit Card", "Bitcoin"];
 
 function ToggleGroup() {
@@ -552,9 +553,14 @@ function App() {
 
 
   return (
-    <>
-      <BurgerMenu />
-    </>
+    <Router>
+      <Routes>
+        <Route path='/' element={<BurgerMenu/>}/>
+        <Route exact path='/manager' element={<Manager/>}/>
+        <Route path='/manager/inventory' element={<ManagerInventory/>}/>
+        <Route path='/manager/menuitems' element={<ManagerMenu/>}/>
+      </Routes>
+    </Router>
   );
 }
 

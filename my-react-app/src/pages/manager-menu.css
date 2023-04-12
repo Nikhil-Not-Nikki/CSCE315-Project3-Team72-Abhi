@@ -1,0 +1,35 @@
+.content {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    min-height: 95vh;
+}
+
+.input-wrapper {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    gap: 150px;
+}
+
+.input-form {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.inputs {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 40px;
+    margin: 40px;
+}
+
+.foot {
+    margin-top: auto;
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
