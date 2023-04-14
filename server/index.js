@@ -50,6 +50,21 @@ app.get('/user', (req, res) => {
         });
 });
 
+app.get('/api', (req, res) => {
+    menu = []
+    table_name = req.query.test;
+    pool
+        .query(`SELECT * FROM ${table_name};`)
+        .then(query_res => {
+            for (let i = 0; i < query_res.rowCount; i++){
+                menu.push(query_res.rows[i]);
+            }
+            const data = {menu: menu};
+            console.log(menu);
+            res.json({message: menu});
+        });
+});
+
 app.listen(port, () => {
     console.log(`Example app listening at http://localhost:${port}`);
 });
