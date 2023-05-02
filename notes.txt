@@ -1,0 +1,4 @@
+updating inventory;
+
+use the class transaction, has 4 arrays,
+go to menu table, grab materials, parse the materals, 
