@@ -81,9 +81,18 @@ const Tab = styled.button`
   `}
 `;
 
+function CustomerMenuItem() {
 
-function BasketMenu(props) {
-    var currentMenu = ["Revs basket", "Doublestack Burger", "idk", "burger 4", "burger 5", "burger 6", "burger 7", "burger 8", "burger 9"]
+    return(
+        <div class="container">
+            
+        </div>
+    )
+}
+
+
+function CustomerBurgerMenu(props) {
+    var currentMenu = ["Revs Burger", "Doublestack Burger", "idk", "burger 4", "burger 5", "burger 6", "burger 7", "burger 8", "burger 9"]
     const [currentPage, updatePage] = useState(0);
     const [orderText, updateOrderText] = useState("Current Order");
     //const [value, onChangeText] = React.useState('Useless Multiline Placeholder');
@@ -109,8 +118,7 @@ function BasketMenu(props) {
     
     
     const MultilineTextInputExample = () => {
-      // If you type something in the text box that is a color, the background will change to that
-      // color.
+
       return (
         <View
           style={{
@@ -136,67 +144,67 @@ function BasketMenu(props) {
       for (var i = 0; i < 9; i++) {
         switch(i) {
           case 0:
-            updateMenuButton1Text(menu_object.basket_name_array[i + (currentPage * 9)]);
+            updateMenuButton1Text(menu_object.burger_name_array[i + (currentPage * 9)]);
             break;
           case 1:
-            if ((i + (currentPage * 9)) < menu_object.basket_name_array.length) {
-              updateMenuButton2Text(menu_object.basket_name_array[i + (currentPage * 9)]);
+            if ((i + (currentPage * 9)) < menu_object.burger_name_array.length) {
+              updateMenuButton2Text(menu_object.burger_name_array[i + (currentPage * 9)]);
             }
             else {
               updateMenuButton2Text(null);
             }
             break;
           case 2:
-            if ((i + (currentPage * 9)) < menu_object.basket_name_array.length) {
-              updateMenuButton3Text(menu_object.basket_name_array[i + (currentPage * 9)]);
+            if ((i + (currentPage * 9)) < menu_object.burger_name_array.length) {
+              updateMenuButton3Text(menu_object.burger_name_array[i + (currentPage * 9)]);
             }
             else {
               updateMenuButton3Text(null);
             }
             break;
           case 3:
-            if ((i + (currentPage * 9)) < menu_object.basket_name_array.length) {
-              updateMenuButton4Text(menu_object.basket_name_array[i + (currentPage * 9)]);
+            if ((i + (currentPage * 9)) < menu_object.burger_name_array.length) {
+              updateMenuButton4Text(menu_object.burger_name_array[i + (currentPage * 9)]);
             }
             else {
               updateMenuButton4Text(null);
             }
             break;
           case 4:
-            if ((i + (currentPage * 9)) < menu_object.basket_name_array.length) {
-              updateMenuButton5Text(menu_object.basket_name_array[i + (currentPage * 9)]);
+            if ((i + (currentPage * 9)) < menu_object.burger_name_array.length) {
+              updateMenuButton5Text(menu_object.burger_name_array[i + (currentPage * 9)]);
             }
             else {
               updateMenuButton5Text(null);
             }
             break;
           case 5:
-            if ((i + (currentPage * 9)) < menu_object.basket_name_array.length) {
-              updateMenuButton6Text(menu_object.basket_name_array[i + (currentPage * 9)]);
+            if ((i + (currentPage * 9)) < menu_object.burger_name_array.length) {
+              updateMenuButton6Text(menu_object.burger_name_array[i + (currentPage * 9)]);
             }
             else {
               updateMenuButton6Text(null);
             }
             break;
           case 6:
-            if ((i + (currentPage * 9)) < menu_object.basket_name_array.length) {
-              updateMenuButton7Text(menu_object.basket_name_array[i + (currentPage * 9)]);
+            if ((i + (currentPage * 9)) < menu_object.burger_name_array.length) {
+              updateMenuButton7Text(menu_object.burger_name_array[i + (currentPage * 9)]);
             }
             else {
               updateMenuButton7Text(null);
             }
             break;
           case 7:
-            if ((i + (currentPage * 9)) < menu_object.basket_name_array.length) {
-              updateMenuButton8Text(menu_object.basket_name_array[i + (currentPage * 9)]);
+            if ((i + (currentPage * 9)) < menu_object.burger_name_array.length) {
+              updateMenuButton8Text(menu_object.burger_name_array[i + (currentPage * 9)]);
             }
             else {
               updateMenuButton8Text(null);
             }
             break;
           case 8:
-            if ((i + (currentPage * 9)) < menu_object.basket_name_array.length) {
-              updateMenuButton9Text(menu_object.basket_name_array[i + (currentPage * 9)]);
+            if ((i + (currentPage * 9)) < menu_object.burger_name_array.length) {
+              updateMenuButton9Text(menu_object.burger_name_array[i + (currentPage * 9)]);
             }
             else {
               updateMenuButton9Text(null);
@@ -220,56 +228,56 @@ function BasketMenu(props) {
     //updateText();
   
     function menuButton1Click() {
-      current_transaction.add_to_transaciton(menu_object.basket_id_array[0 + (currentPage * 9)]); 
+      current_transaction.add_to_transaciton(menu_object.burger_id_array[0 + (currentPage * 9)]); 
       updateOrderText(current_transaction.to_string());
       forceUpdate();
       menu_object.printMenu();
     }
   
     function menuButton2Click() {
-      current_transaction.add_to_transaciton(menu_object.basket_id_array[1 + (currentPage * 9)]); 
+      current_transaction.add_to_transaciton(menu_object.burger_id_array[1 + (currentPage * 9)]); 
       updateOrderText(current_transaction.to_string());
       forceUpdate();
     }
   
     function menuButton3Click() {
-      current_transaction.add_to_transaciton(menu_object.basket_id_array[2 + (currentPage * 9)]); 
+      current_transaction.add_to_transaciton(menu_object.burger_id_array[2 + (currentPage * 9)]); 
       updateOrderText(current_transaction.to_string());
       forceUpdate();
     }
   
     function menuButton4Click() {
-      current_transaction.add_to_transaciton(menu_object.basket_id_array[3 + (currentPage * 9)]); 
+      current_transaction.add_to_transaciton(menu_object.burger_id_array[3 + (currentPage * 9)]); 
       updateOrderText(current_transaction.to_string());
       forceUpdate();
     }
   
     function menuButton5Click() {
-      current_transaction.add_to_transaciton(menu_object.basket_id_array[4 + (currentPage * 9)]); 
+      current_transaction.add_to_transaciton(menu_object.burger_id_array[4 + (currentPage * 9)]); 
       updateOrderText(current_transaction.to_string());
       forceUpdate();
     }
   
     function menuButton6Click() {
-      current_transaction.add_to_transaciton(menu_object.basket_id_array[5 + (currentPage * 9)]); 
+      current_transaction.add_to_transaciton(menu_object.burger_id_array[5 + (currentPage * 9)]); 
       updateOrderText(current_transaction.to_string());
       forceUpdate();
     }
   
     function menuButton7Click() {
-      current_transaction.add_to_transaciton(menu_object.basket_id_array[6 + (currentPage * 9)]); 
+      current_transaction.add_to_transaciton(menu_object.burger_id_array[6 + (currentPage * 9)]); 
       updateOrderText(current_transaction.to_string());
       forceUpdate();
     }
   
     function menuButton8Click() {
-      current_transaction.add_to_transaciton(menu_object.basket_id_array[7 + (currentPage * 9)]); 
+      current_transaction.add_to_transaciton(menu_object.burger_id_array[7 + (currentPage * 9)]); 
       updateOrderText(current_transaction.to_string());
       forceUpdate();
     }
   
     function menuButton9Click() {
-      current_transaction.add_to_transaciton(menu_object.basket_id_array[8 + (currentPage * 9)]); 
+      current_transaction.add_to_transaciton(menu_object.burger_id_array[8 + (currentPage * 9)]); 
       updateOrderText(current_transaction.to_string());
       forceUpdate();
     }
@@ -287,6 +295,20 @@ function BasketMenu(props) {
       console.log(currentPage);
       updateText();
     }
+
+    const [message, setMessage] = useState("");
+
+    function TestStatus() {
+      var url = "http://localhost:3001";
+      var test = "inventory";
+
+      fetch(`${url}/api?test=${test}`)
+      fetch(url, {body: "param1,param2,param3"})
+      .then((res) => res.json())
+      .then((data) => setMessage(data.message));
+
+      console.log(message)
+    }
   
     return (
       <div className="logo-background">
@@ -303,6 +325,7 @@ function BasketMenu(props) {
           <Button onClick={menuButton9Click}>{menuButton9Text}</Button>
           <Button onClick={previousButtonClick}>Previous</Button>
           <Button onClick={nextButtonClick}>Next</Button>
+          <Button onClick={TestStatus}>Test</Button>
         </div>
         <Spacer grow='0.1' />
         <MultilineTextInputExample value={orderText} onChange={e => updateOrderText(e.target.value)}/>
@@ -314,4 +337,4 @@ function BasketMenu(props) {
     );
   }
 
-  export default BasketMenu;
+  export default CustomerBurgerMenu;

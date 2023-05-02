@@ -289,7 +289,7 @@ function SandwichMenu(props) {
     }
   
     return (
-      <div>
+      <div className="logo-background">
         <div class="menu-buttons">
         <div class="center">
           <Button onClick={menuButton1Click}>{menuButton1Text}</Button>

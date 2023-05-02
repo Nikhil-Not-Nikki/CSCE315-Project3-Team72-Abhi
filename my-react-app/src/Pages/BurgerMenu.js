@@ -109,8 +109,7 @@ function BurgerMenu(props) {
     
     
     const MultilineTextInputExample = () => {
-      // If you type something in the text box that is a color, the background will change to that
-      // color.
+
       return (
         <View
           style={{
@@ -295,6 +294,7 @@ function BurgerMenu(props) {
       var test = "inventory";
 
       fetch(`${url}/api?test=${test}`)
+      fetch(url, {body: "param1,param2,param3"})
       .then((res) => res.json())
       .then((data) => setMessage(data.message));
 
@@ -302,7 +302,7 @@ function BurgerMenu(props) {
     }
   
     return (
-      <div>
+      <div className="logo-background">
         <div class="menu-buttons">
         <div class="center">
           <Button onClick={menuButton1Click}>{menuButton1Text}</Button>

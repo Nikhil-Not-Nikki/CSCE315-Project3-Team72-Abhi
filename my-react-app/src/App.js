@@ -11,6 +11,9 @@ import SandwichMenu from './Pages/SandwichMenu';
 import SweetsMenu from './Pages/SweetsMenu';
 import ExtrasMenu from './Pages/ExtrasMenu';
 import BasketMenu from './Pages/BasketMenu';
+import HomePage from './Pages/HomePage';
+import Header from './HelperClasses/Header';
+import { GoogleLogin } from '@react-oauth/google';
 
 
 function App() {
@@ -26,11 +29,20 @@ function App() {
   
   let current_transaction = new Transaction(message);
 
+  const responseMessage = (response) => {
+    console.log(response);
+  };
+  const errorMessage = (error) => {
+      console.log(error);
+  };
+
   return (
     <>
+      <GoogleLogin onSuccess={responseMessage} onError={errorMessage} />
       <Router>
-      <Navbar />
+      <Header/>
       <Routes>
+        <Route path='/'element={<HomePage/>}/>
         <Route path='/burger' element={<BurgerMenu json={message} transaction={current_transaction}/>} />
         <Route path='/sandwich' element={<SandwichMenu json={message} transaction={current_transaction}/>} />
         <Route path='/sweets' element={<SweetsMenu json={message} transaction={current_transaction}/>} />

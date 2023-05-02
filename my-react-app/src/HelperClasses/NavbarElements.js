@@ -3,7 +3,7 @@ import { NavLink as Link } from "react-router-dom";
 import styled from "styled-components";
   
 export const Nav = styled.nav`
-  background: #ffb3ff;
+  background: #570e0e;
   height: 85px;
   display: flex;
   justify-content: space-between;
@@ -20,7 +20,7 @@ export const NavLink = styled(Link)`
   height: 100%;
   cursor: pointer;
   &.active {
-    color: #4d4dff;
+    color: #dba032;
   }
 `;
   
