@@ -1,0 +1,42 @@
+
+.home-page-content {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    min-height: 10vh;
+    /*margin-left: 10vh;*/
+    color:darkgoldenrod
+}
+
+.init-greeting {
+    margin-top: 30px;
+    font-size: 60px;
+}
+
+.wrapper {
+    font-family: "Trebuchet MS";
+    text-align: center;
+}
+
+.weather-info {
+    font-size: 30px;
+    margin-top: 50px;
+    color: whitesmoke;
+}
+
+.weather-data {
+    font-weight: bold;
+    color: #61dafb;
+}
+
+.logo-background {
+    background-image: 
+    url(
+  "https://www.sgclark.com/blog/wp-content/uploads/2022/02/ncaa_texas_am_university_alt.png");
+    background-size: "cover";
+    height: 90vh;
+    margin-top: 0px;
+    font-size:50px;
+    background-repeat:no-repeat; 
+    background-position: center center;
+  }

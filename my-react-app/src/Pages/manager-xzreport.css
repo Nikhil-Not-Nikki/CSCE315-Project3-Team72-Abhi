@@ -1,0 +1,61 @@
+.content {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    min-height: 95vh;
+}
+
+.wrapper, html {
+    background: #732F2F;
+    color: whitesmoke;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    gap: 200px;
+}
+
+.content-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.generate-report-button {
+    margin: auto;
+    /*max-height: 100px;*/
+}
+
+.foot {
+    margin-top: auto;
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin-bottom: 50px;
+}
+
+.total-label {
+    font-size: 40px;
+}
+
+.button-container {
+    margin: 0;
+}
+
+.info-half {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 200px;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.transaction-list-scrollspy {
+    min-width: 800px;
+    position: relative;
+    height: 700px;
+    overflow: auto;
+}
